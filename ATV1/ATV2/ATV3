@@ -1,0 +1,300 @@
+========================
+📁 style.css (DESIGN BONITO)
+========================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2f7, #dfe9f3);
+  min-height: 100vh;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #2c3e50, #1abc9c);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26,188,156,0.4);
+}
+
+button {
+  padding: 12px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #16a085;
+  transform: scale(1.03);
+}
+
+a {
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #16a085;
+}
+
+
+========================
+📁 index.html (MENU)
+========================
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Formulários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Sistema de Formulários</h1>
+</header>
+
+<div class="container">
+  <h2>Escolha um formulário:</h2>
+
+  <ul>
+    <li><a href="usuario.html">Cadastro de Usuário</a></li>
+    <li><a href="tarefa.html">Cadastro de Tarefa</a></li>
+    <li><a href="reserva.html">Reserva de Espaço</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="contato.html">Contato Coordenação</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+========================
+📁 usuario.html (CADASTRO USUÁRIO)
+========================
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro Usuário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Cadastro de Usuário</h1>
+</header>
+
+<div class="container">
+  <form>
+    <label>Nome</label>
+    <input type="text" required>
+
+    <label>E-mail</label>
+    <input type="email" required>
+
+    <label>Senha</label>
+    <input type="password" required>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <br>
+  <a href="index.html">Voltar</a>
+</div>
+
+</body>
+</html>
+
+
+========================
+📁 tarefa.html (CADASTRO TAREFA)
+========================
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro Tarefa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Cadastro de Tarefa</h1>
+</header>
+
+<div class="container">
+  <form>
+    <label>Título</label>
+    <input type="text" required>
+
+    <label>Descrição</label>
+    <textarea rows="4" required></textarea>
+
+    <label>Prioridade</label>
+    <select>
+      <option>Baixa</option>
+      <option>Média</option>
+      <option>Alta</option>
+    </select>
+
+    <button type="submit">Salvar</button>
+  </form>
+
+  <br>
+  <a href="index.html">Voltar</a>
+</div>
+
+</body>
+</html>
+
+
+========================
+📁 reserva.html (RESERVA ESCOLA)
+========================
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva de Espaço</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Reserva de Espaço</h1>
+</header>
+
+<div class="container">
+  <form>
+    <label>Nome</label>
+    <input type="text" required>
+
+    <label>Turma</label>
+    <input type="text" required>
+
+    <label>Horário</label>
+    <input type="time" required>
+
+    <button type="submit">Reservar</button>
+  </form>
+
+  <br>
+  <a href="index.html">Voltar</a>
+</div>
+
+</body>
+</html>
+
+
+========================
+📁 login.html (LOGIN)
+========================
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Login</h1>
+</header>
+
+<div class="container">
+  <form>
+    <label>E-mail</label>
+    <input type="email" required>
+
+    <label>Senha</label>
+    <input type="password" required>
+
+    <button type="entrar">Entrar</button>
+  </form>
+
+  <br>
+  <a href="index.html">Voltar</a>
+</div>
+
+</body>
+</html>
+
+
+========================
+📁 contato.html (COORDENAÇÃO)
+========================
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato Coordenação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Contato com a Coordenação</h1>
+</header>
+
+<div class="container">
+  <form>
+    <label>Assunto</label>
+    <input type="text" required>
+
+    <label>Mensagem</label>
+    <textarea rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <br>
+  <a href="index.html">Voltar</a>
+</div>
+
+</body>
+</html>
